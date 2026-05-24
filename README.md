@@ -15,4 +15,4 @@ mediscan/
 ```
 
 Image preprocessing implementation lives in:
-`/home/runner/work/Proyecto-de-etica-Medicina/Proyecto-de-etica-Medicina/mediscan/backend/app/vision/image_preprocessing.py`
+`mediscan/backend/app/vision/image_preprocessing.py`
