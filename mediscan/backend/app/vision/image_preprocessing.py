@@ -41,7 +41,7 @@ class ImagePreprocessor:
         1) Discrete Laplacian: L(x,y) = I(x+1,y)+I(x-1,y)+I(x,y+1)+I(x,y-1)-4I(x,y)
         2) Variance: sigma^2 = (1/N) * sum_i (L_i - mean(L))^2
         """
-        image = gray.astype(np.float64, copy=False)
+        image = gray.astype(np.float64)
 
         center = image[1:-1, 1:-1]
         laplacian = (
@@ -70,7 +70,7 @@ class ImagePreprocessor:
         4) G(u,v) = F(u,v) * M(u,v)
         5) I'(x,y) = Re(IFFT2(G(u,v)))
         """
-        image = gray.astype(np.float64, copy=False)
+        image = gray.astype(np.float64)
         spectrum = np.fft.fftshift(np.fft.fft2(image))
 
         rows, cols = image.shape
